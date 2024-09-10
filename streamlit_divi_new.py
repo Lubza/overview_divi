@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import sqlite3
+#import sqlite3
 import numpy as np
-import re
-import pandas as pdpip 
+#import re
+#import pandas as pdpip 
 from datetime import datetime
 import yfinance as yf
 import plotly.express as px
@@ -12,6 +12,7 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
+import psycopg2
 
 ####
 
