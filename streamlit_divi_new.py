@@ -4,7 +4,7 @@ import altair as alt
 import sqlite3
 import numpy as np
 import re
-import pandas as pd
+import pandas as pdpip 
 from datetime import datetime
 import yfinance as yf
 import plotly.express as px
