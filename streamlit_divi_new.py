@@ -11,20 +11,28 @@ import plotly.express as px
 import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 ####
 
 from sqlalchemy import create_engine
 
-# Pripojenie k PostgreSQL
-database_url = 'postgresql://lubza_ib:Jfd3cNeULsuufDEqSQ1yGbWELzgCCNCb@dpg-crg1meg8fa8c73ak3960-a.frankfurt-postgres.render.com:5432/ib_db'
+# Získanie environmentálnej premenné
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-postgres_engine = create_engine(database_url)
+# Vytvorenie pripojenia k PostgreSQL databáze
+engine = create_engine(DATABASE_URL)
+
+# Pripojenie k PostgreSQL
+#database_url = 'postgresql://lubza_ib:Jfd3cNeULsuufDEqSQ1yGbWELzgCCNCb@dpg-crg1meg8fa8c73ak3960-a.frankfurt-postgres.render.com:5432/ib_db'
+
+#postgres_engine = create_engine(database_url)
 
 # Načítanie dát z tabuľky 'dividends' do pandas DataFrame
 try:
     query = "SELECT * FROM dividends"
-    df = pd.read_sql(query, postgres_engine)
+    #df = pd.read_sql(query, postgres_engine)
+    df = pd.read_sql(query, engine)
     print("Data successfully loaded into DataFrame.")
 except Exception as e:
     print("Error loading data:", e)
