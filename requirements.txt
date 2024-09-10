@@ -7,4 +7,4 @@ seaborn==0.13.2
 SQLAlchemy==2.0.32
 streamlit==1.38.0
 yfinance==0.2.43
-~treamlit==1.38.0
+
