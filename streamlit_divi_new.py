@@ -1,22 +1,10 @@
-import streamlit as st
-import pandas as pd
-import altair as alt
-#import sqlite3
-import numpy as np
-#import re
-#import pandas as pdpip 
 from datetime import datetime
-import yfinance as yf
-import plotly.express as px
+import altair as alt
+import pandas as pd
 import streamlit as st
-import seaborn as sns
-import matplotlib.pyplot as plt
-import os
-import psycopg2
+from sqlalchemy import create_engine
 
 ####
-
-from sqlalchemy import create_engine
 
 # Získanie environmentálnej premenné
 #DATABASE_URL = os.getenv("DATABASE_URL")
